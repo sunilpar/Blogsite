@@ -28,7 +28,7 @@ export class Service {
           featuredImage,
           status,
           userId,
-          comments
+          comments:[]
         }
       );
     } catch (error) {

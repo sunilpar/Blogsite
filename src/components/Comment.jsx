@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import appwriteService from "../appwrite/config";
 import { Input, Button } from "./index";
 import parse from "html-react-parser";
+import anonymous from "../assets/anonymous_user.png";
 
 
 function Comment(post) {
@@ -33,13 +34,20 @@ function Comment(post) {
           </Button>
         </form>
       </div>
-      <div className="h-screen text-white flex flex-col justify-start">
+      <div className="min-h-screen text-white flex flex-col justify-start">
         <h2 className="text-3xl text-gray-400 flex justify-start mb-14">Citizens comments:</h2>
         {post.comments.map((comment) => {
           return (
-            <li className="mb-3 flex justify-start ml-40 p-3 rounded-lg w-fit bg-gray-900">
+            <div className="flex flex-row  ml-40 ">
+              <div className=" min-w-[50px] w-fit mr-6">
+                <img className="w-[50px] h-[50px] opacity-50" src={anonymous} alt="anonymous user" />
+              </div>
+              <div className="mb-10 flex flex-row justify-start align-middle  p-3 rounded-lg w-fit bg-gray-900">
               {parse(comment)}
-            </li>
+            </div>  
+            
+            </div>
+            
           );
         })}
       </div>

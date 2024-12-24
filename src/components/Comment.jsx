@@ -39,7 +39,7 @@ function Comment(post) {
         </form>
       </div>
       <div className="min-h-screen text-white flex flex-col justify-start">
-        <h2 className="text-3xl text-gray-400 flex justify-start mb-14">Citizens' Comments:</h2>
+        <h2 className="text-3xl text-gray-400 flex justify-start mb-14">Citizen's Comments:</h2>
         {comments.map((comment, index) => (
           <div key={index} className="flex flex-row ml-40">
             <div className="min-w-[50px] w-fit mr-6">

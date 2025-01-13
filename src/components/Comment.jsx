@@ -10,12 +10,10 @@ function Comment(post) {
     defaultValues: { comment: "" },
   });
 
-  // Initialize state for comments
   const [comments, setComments] = useState(post.comments || []);
 
   const submit = async (data) => {
     const updatedComments = [...comments, data.comment];
-    console.log(updatedComments);
     await appwriteService.updatePost(post.$id, {
       ...post,
       comments: updatedComments,

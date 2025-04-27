@@ -8,7 +8,7 @@ import Homelogin from "../components/Homelogin";
 function Home() {
   const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
+  useEffect(() =>{
     appwriteService.getPosts().then((posts) => {
       if (posts) {
         setPosts(posts.documents);
